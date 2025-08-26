@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch  ==>its cammand to run the code */
+/* cd "C:\Users\ak096\OneDrive\web folder\twiiter.clone\portfolio-backend" */

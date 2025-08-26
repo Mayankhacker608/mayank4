@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Mayank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Mayank Goyal - WordPress Developer, Portfolio showcasing web development projects, services, and contact information."
+    />
+    <meta
+      name="keywords"
+      content="Mayank Goyal, Web Developer, WordPress, Tailwind CSS, Portfolio"
+    />
+    <meta name="author" content="Mayank Goyal" />
+    <meta property="og:title" content="Portfolio - Mayank Goyal" />
+    <meta
+      property="og:description"
+      content="WordPress Developer & Web Designer Portfolio"
+    />
+    <meta property="og:image" content="mayank.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="mayank.png" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <!-- Tailwind CSS Animations -->
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fadeInUp {
+        animation: fadeInUp 1s ease forwards;
+      }
+      .animate-fadeInDown {
+        animation: fadeInDown 1s ease forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white transition-colors duration-500">
+    <!-- Header -->
+    <header
+      class="flex justify-between items-center px-6 py-4 bg-[#303536] sticky top-0 z-50 shadow-md"
+    >
+      <div class="text-2xl font-extrabold cursor-pointer">Portfolio</div>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8 text-lg">
+          <li><a href="#home" class="hover:text-[#03e3fc]">Home</a></li>
+          <li><a href="#about" class="hover:text-[#03e3fc]">About</a></li>
+          <li><a href="#services" class="hover:text-[#03e3fc]">Services</a></li>
+          <li>
+            <a href="#projects" class="hover:text-[#03e3fc]">Portfolio</a>
+          </li>
+          <li><a href="#contact" class="hover:text-[#03e3fc]">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Menu Icon -->
+      <button id="menuBtn" class="md:hidden p-2 bg-[#03e3fc] rounded">☰</button>
+    </header>
+
+    <!-- Mobile Nav -->
+    <nav id="mobileMenu" class="hidden md:hidden bg-[#303536]">
+      <ul class="flex flex-col items-center space-y-4 py-4 text-lg">
+        <li><a href="#home" class="hover:text-[#03e3fc]">Home</a></li>
+        <li><a href="#about" class="hover:text-[#03e3fc]">About</a></li>
+        <li><a href="#services" class="hover:text-[#03e3fc]">Services</a></li>
+        <li><a href="#projects" class="hover:text-[#03e3fc]">Portfolio</a></li>
+        <li><a href="#contact" class="hover:text-[#03e3fc]">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Floating Social Icons -->
+    <div class="fixed top-1/3 left-0 flex flex-col space-y-4 z-40">
+      <a
+        href="https://wa.me/917404380899?text=Hello%2C%20Welcome%20to%20our%20company"
+        target="_blank"
+        class="bg-[#25D366] p-3 rounded-tr-lg rounded-br-lg shadow-lg hover:scale-110 transition-transform"
+      >
+        WhatsApp
+      </a>
+
+      <a
+        href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+        target="_blank"
+        class="bg-[#0A66C2] p-3 rounded-tr-lg rounded-br-lg shadow-lg hover:scale-110 transition-transform"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="https://github.com/Mayankhacker608/mayankgoyalportfolio"
+        target="_blank"
+        class="bg-[#333] p-3 rounded-tr-lg rounded-br-lg shadow-lg hover:scale-110 transition-transform text-white"
+      >
+        GitHub
+      </a>
+    </div>
+
+    <!-- Hero -->
+    <section
+      id="home"
+      class="flex flex-col md:flex-row items-center justify-between px-6 py-12 max-w-6xl mx-auto"
+    >
+      <div class="space-y-4 md:w-1/2 text-center md:text-left">
+        <h3 class="text-2xl">Hello, It's Me</h3>
+        <h1 class="text-4xl md:text-5xl font-extrabold">Mayank Goyal</h1>
+        <h2 class="text-2xl md:text-4xl font-bold">
+          And I'm a <span id="typed" class="text-[#03e3fc]"></span>
+        </h2>
+        <p class="text-gray-300">
+          I build modern, responsive websites and WordPress e-commerce stores.
+        </p>
+        <div class="flex justify-center md:justify-start gap-4 mt-2">
+          <a href="#contact">
+            <button
+              class="px-6 py-3 bg-[#03e3fc] hover:bg-[#02c2d9] transition rounded-full font-semibold shadow-lg"
+            >
+              Hire Me
+            </button>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1NcLcm1NaSwzfhHrVfjhUJu35h_zYSLIl/view?usp=drive_link"
+          >
+            <button
+              class="px-6 py-3 bg-gray-700 hover:bg-gray-600 transition rounded-full font-semibold shadow-lg"
+            >
+              Download CV
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+        <img
+          src="mayank.png"
+          alt="Mayank Profile Picture"
+          loading="lazy"
+          class="w-64 md:w-[400px] rounded-lg shadow-lg"
+        />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section
+      id="about"
+      class="flex flex-col-reverse md:flex-row items-center gap-10 px-6 py-12 max-w-6xl mx-auto"
+    >
+      <div class="md:w-2/3 space-y-4 text-center md:text-left">
+        <h2 class="text-4xl font-bold">
+          About <span class="text-[#03e3fc]">Me</span>
+        </h2>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          I am a skilled WordPress developer with expertise in creating and
+          customizing WooCommerce-powered e-commerce stores. I focus on building
+          websites that are fast, user-friendly, and optimized for business
+          growth.
+        </p>
+        <a href="#"
+          ><button
+            class="px-6 py-3 bg-[#03e3fc] hover:bg-[#02c2d9] transition rounded-full font-semibold shadow-lg"
+          >
+            Read More
+          </button></a
+        >
+      </div>
+      <img
+        src="mayank23.png"
+        alt="Mayank Working"
+        loading="lazy"
+        class="w-64 md:w-[350px] rounded-lg shadow-lg"
+      />
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="px-6 py-12 bg-[#1a1a1a]">
+      <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInDown">
+        Our <span class="text-[#03e3fc]">Services</span>
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div
+          class="service-card bg-[#3f4242] p-6 rounded-xl text-center shadow-lg transform transition-transform duration-500 hover:scale-105"
+        >
+          <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+          <p class="text-gray-300">
+            Fully responsive, SEO-optimized, and high-performance websites using
+            modern frameworks.
+          </p>
+        </div>
+
+        <div
+          class="service-card bg-[#3f4242] p-6 rounded-xl text-center shadow-lg transform transition-transform duration-500 hover:scale-105"
+        >
+          <h3 class="text-2xl font-bold mb-2">Web Design</h3>
+          <p class="text-gray-300">
+            Wireframes to polished UI/UX designs for smooth user experience.
+          </p>
+        </div>
+
+        <div
+          class="service-card bg-[#3f4242] p-6 rounded-xl text-center shadow-lg transform transition-transform duration-500 hover:scale-105"
+        >
+          <h3 class="text-2xl font-bold mb-2">E-Commerce</h3>
+          <p class="text-gray-300">
+            Specializing in WooCommerce and custom e-commerce development.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- latest project -->
+    <section id="projects" class="px-6 py-12 max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-8">
+        Latest <span class="text-[#03e3fc]">Projects</span>
+      </h2>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          class="cursor-pointer group relative"
+          onclick="openLightbox('Mayank Portfolio.mp4')"
+        >
+          <video
+            src="Mayank Portfolio.mp4"
+            class="w-full rounded-lg shadow-lg object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            loading="lazy"
+          ></video>
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+          >
+            <span class="text-white font-bold text-lg">View</span>
+          </div>
+        </div>
+        <div
+          class="cursor-pointer group relative"
+          onclick="openLightbox('Screen Recording 2025-08-16 082337.mp4')"
+        >
+          <video
+            src="Screen Recording 2025-08-16 082337.mp4"
+            class="w-full rounded-lg shadow-lg object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            loading="lazy"
+          ></video>
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+          >
+            <span class="text-white font-bold text-lg">View</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50"
+    >
+      <video
+        id="lightboxVideo"
+        class="max-h-[90%] max-w-[90%]"
+        controls
+        autoplay
+      ></video>
+      <button
+        onclick="closeLightbox()"
+        class="absolute top-4 right-4 text-white text-2xl font-bold"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- Contact + Map -->
+    <section id="contact" class="px-6 py-12 bg-[#1a1a1a]">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">
+        Contact <span class="text-[#03e3fc]">Me!</span>
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Form -->
+        <form id="contactForm" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="Full Name"
+              class="w-full p-4 rounded-lg bg-[#3a3d3d] focus:outline-none focus:ring-2 focus:ring-[#03e3fc] shadow-md text-white"
+            />
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="Email"
+              class="w-full p-4 rounded-lg bg-[#3a3d3d] focus:outline-none focus:ring-2 focus:ring-[#03e3fc] shadow-md text-white"
+            />
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input
+              type="number"
+              id="phone"
+              placeholder="Mobile Number"
+              class="w-full p-4 rounded-lg bg-[#3a3d3d] focus:outline-none focus:ring-2 focus:ring-[#03e3fc] shadow-md text-white"
+            />
+            <input
+              type="text"
+              id="subject"
+              placeholder="Subject"
+              class="w-full p-4 rounded-lg bg-[#3a3d3d] focus:outline-none focus:ring-2 focus:ring-[#03e3fc] shadow-md text-white"
+            />
+          </div>
+          <textarea
+            id="message"
+            required
+            placeholder="Message"
+            class="w-full p-4 rounded-lg bg-[#3a3d3d] focus:outline-none focus:ring-2 focus:ring-[#03e3fc] shadow-md text-white h-36 resize-none"
+          ></textarea>
+          <div id="formMessage" class="hidden text-center text-green-500"></div>
+          <button
+            id="submitBtn"
+            type="submit"
+            class="w-full md:w-auto px-8 py-3 bg-[#03e3fc] hover:bg-[#02c2d9] transition rounded-full font-semibold shadow-lg flex items-center justify-center gap-2 mx-auto"
+          >
+            <span id="btnText">Send Message</span>
+            <svg
+              id="spinner"
+              class="hidden animate-spin h-5 w-5 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"
+              ></circle>
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 000 16v-4l-3 3 3 3v-4a8 8 0 01-8-8z"
+              ></path>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Google Map -->
+        <div
+          class="w-full h-64 sm:h-80 md:h-full rounded-lg overflow-hidden shadow-lg"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1234567890!2d77.123456!3d28.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1234567890%3A0xabcdef1234567890!2sYour+Location!5e0!3m2!1sen!2sin!4v1693098901234!5m2!1sen!2sin"
+            class="w-full h-full border-0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Top -->
+    <button
+      id="backToTop"
+      class="fixed bottom-4 right-1/2 bg-[#03e3fc] text-black p-2 rounded-full shadow-lg hidden"
+    >
+      ↑
+    </button>
+
+    <!-- Visitor Counter -->
+    <div
+      class="fixed bottom-4 left-4 bg-gray-800 p-2 rounded shadow-lg text-sm text-white"
+      id="visitorCounter"
+    >
+      Visitors: 0
+    </div>
+
+    <!-- Dark/Light Toggle -->
+    <button
+      id="themeToggle"
+      class="fixed top-4 right-4 bg-gray-700 text-white p-2 rounded shadow-lg"
+    >
+      🌓
+    </button>
+
+    <!-- Scripts -->
+    <script>
+      // Typed.js
+      new Typed("#typed", {
+        strings: [
+          "Web Developer",
+          "WordPress Expert",
+          "UI Designer",
+          "Freelancer",
+        ],
+        typeSpeed: 80,
+        backSpeed: 50,
+        loop: true,
+      });
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden")
+      );
+
+      // Lightbox
+      function openLightbox(src) {
+        document.getElementById("lightboxVideo").src = src;
+        document.getElementById("lightbox").classList.remove("hidden");
+      }
+      function closeLightbox() {
+        document.getElementById("lightboxVideo").src = "";
+        document.getElementById("lightbox").classList.add("hidden");
+      }
+
+      // Back to top
+      const backBtn = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) backBtn.classList.remove("hidden");
+        else backBtn.classList.add("hidden");
+      });
+      backBtn.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      );
+
+      // Dark/Light Mode
+      const themeToggle = document.getElementById("themeToggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("bg-white");
+        document.body.classList.toggle("text-black");
+        document.body.classList.toggle("bg-black");
+        document.body.classList.toggle("text-white");
+      });
+
+      // Visitor Counter (simple localStorage demo)
+      const counter = document.getElementById("visitorCounter");
+      let visits = localStorage.getItem("visits") || 0;
+      visits++;
+      localStorage.setItem("visits", visits);
+      counter.innerText = "Visitors: " + visits;
+
+      // mail
+      const form = document.getElementById("contactForm");
+      const formMessage = document.getElementById("formMessage");
+      const submitBtn = document.getElementById("submitBtn");
+      const btnText = document.getElementById("btnText");
+      const spinner = document.getElementById("spinner");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        // Show spinner
+        btnText.innerText = "Sending...";
+        spinner.classList.remove("hidden");
+        submitBtn.disabled = true;
+
+        const data = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          subject: document.getElementById("subject").value,
+          message: document.getElementById("message").value,
+        };
+
+        try {
+          const response = await fetch("http://localhost:5000/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+
+          const result = await response.json();
+
+          if (result.success) {
+            formMessage.className =
+              "text-green-400 font-semibold mt-4 text-lg text-center";
+            formMessage.innerText = "✅ Message Sent Successfully!";
+            formMessage.classList.remove("hidden");
+            form.reset();
+          } else {
+            formMessage.className =
+              "text-red-400 font-semibold mt-4 text-lg text-center";
+            formMessage.innerText =
+              "❌ Oops! Something went wrong. Please try again.";
+            formMessage.classList.remove("hidden");
+          }
+        } catch (error) {
+          formMessage.className =
+            "text-red-400 font-semibold mt-4 text-lg text-center";
+          formMessage.innerText =
+            "⚠️ Network error. Please check your connection.";
+          formMessage.classList.remove("hidden");
+        }
+
+        // Reset button
+        btnText.innerText = "Send Message";
+        spinner.classList.add("hidden");
+        submitBtn.disabled = false;
+      });
+      // <!-- Optional JS for Scroll Animation -->
+
+      const cards = document.querySelectorAll(".service-card");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fadeInUp");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      cards.forEach((card) => observer.observe(card));
+    </script>
+  </body>
+</html>
